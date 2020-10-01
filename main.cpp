@@ -19,11 +19,11 @@ float counter=4.0;
 int FPS=10;
 
 
-int showBackground=1, showRocket=1, showStars=0,showFire=0,sound=0,lp=1; ///Flags
+int showBackground=1, showRocket=1, showStars=0,showFire=0,sound=0,lp=1; //Flags
 
 void init()
 {
-    glClearColor(0,0,0,0.0f); ///Black
+    glClearColor(0,0,0,0.0f); //Black
 
 }
 
@@ -233,7 +233,7 @@ void drawRocket()
         glVertex3d(1.3+xr,0.5+yr,0);
     glEnd();
 
-    ///Payload
+    //Payload
     glColor3f(1,0,0);
     glBegin(GL_TRIANGLES);
         glVertex3d(2.2+xr,0.5+yr,0);
@@ -260,8 +260,8 @@ void drawRocket()
 
 void drawBackground()
 {
-    glColor3f(0.1,0.5,0.1); ///Green Color for ground
-     ///Ground coordinates
+    glColor3f(0.1,0.5,0.1); //Green Color for ground
+     //Ground coordinates
     glBegin(GL_QUADS);
         glVertex3d(5,-3,0);
         glVertex3d(5,-5,0);
@@ -270,9 +270,9 @@ void drawBackground()
         glVertex3d(-5,-3,0);
     glEnd();
 
-    glColor3f(0.5,0.8,0.9); ///Sky blue for sky
+    glColor3f(0.5,0.8,0.9); //Sky blue for sky
 
-    ///Sky Coordinates
+    //Sky Coordinates
     glBegin(GL_QUADS);
         glVertex3d(5,-3,0);
         glVertex3d(5,5,0);
@@ -284,7 +284,7 @@ void drawBackground()
 void launchingPad()
 {
 
-    glColor3f(0.0,0.0,0.0); ///Black
+    glColor3f(0.0,0.0,0.0); //Black
     glBegin(GL_POLYGON);
         glVertex3d(3,-4,0);
         glVertex3d(3,-4.8,0);
@@ -374,10 +374,10 @@ void FlyRocket(int key,int x,int y)
 
 int main(int argc, char *argv[])
 {
-    glutInitDisplayMode(GLUT_DOUBLE| GLUT_RGB); ///GLUT_SINGLE=Single display screen |GLUT_RGB= color hobe RGB
-    glutInitWindowSize(600,600); ///Width,height
-    glutInitWindowPosition(200,200); ///Width,height
-    glutCreateWindow("Rocket Launching"); ///Window er name
+    glutInitDisplayMode(GLUT_DOUBLE| GLUT_RGB); //GLUT_SINGLE=Single display screen |GLUT_RGB= color hobe RGB
+    glutInitWindowSize(600,600); //Width,height
+    glutInitWindowPosition(200,200); //Width,height
+    glutCreateWindow("Rocket Launching"); //Window er name
     init();
 
     glutDisplayFunc(display1);
