@@ -64,7 +64,7 @@ This project creates an animated scene showing a rocket launching from a ground-
 
 ### Code Structure
 
-- `main.cpp`: Single source file containing all graphics code
+- `main.cpp`: Single source file containing all graphics code (includes some platform-specific headers for Windows)
 - **Key Functions**:
   - `drawRocket()`: Renders the rocket with all its components
   - `drawFire()`: Animates the exhaust flames
@@ -105,7 +105,7 @@ g++ main.cpp -o rocket -lGL -lGLU -lglut
 ```
 
 **Using Code::Blocks:**
-1. Open `Polygon.cbp` in Code::Blocks
+1. Open `Polygon.cbp` in Code::Blocks (Note: project file retains original name from template)
 2. Build and run the project (F9)
 
 ### Running the Program
@@ -120,8 +120,9 @@ A 600x600 pixel window titled "Rocket Launching" will appear with the initial sc
 
 - **Window Size**: 600x600 pixels
 - **Coordinate System**: Orthographic projection (-5 to 5 on all axes)
-- **Default FPS**: 10 (changes to 1.5 after transition to space)
+- **Default FPS**: 10 (changes to 1 after transition to space)
 - **Color Format**: RGB
+- **Platform Notes**: Code includes Windows-specific headers; primarily designed for Windows but adaptable to other platforms with minor modifications
 
 ## Animation Sequence
 
